@@ -1,4 +1,4 @@
-package com.github.amyxia1994.intellikclnew.actions;
+package io.kusionstack.kcl.actions;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
