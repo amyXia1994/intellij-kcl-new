@@ -9,10 +9,14 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.amyxia1994.intellijkclnew.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.amyxia1994.intellijkclnew.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
-    </applicationListeners>
+    <actions>
+        <group id="intellijkclnew.HelloMenu" text="Sample Menu" description="Sample menu">
+            <add-to-group group-id="ToolsMenu" anchor="last"  />
+            <action id="Myplugin.Textboxes" class="com.github.amyxia1994.intellikclnew.actions.HelloAction" text="Text Boxes" description="A test menu item" />
+        </group>
+    </actions>
+
+
 </idea-plugin>
