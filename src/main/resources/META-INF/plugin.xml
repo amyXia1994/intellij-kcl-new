@@ -14,6 +14,7 @@
         <lang.syntaxHighlighterFactory language="KCL" implementationClass="io.kusionstack.kcl.KCLSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="io.kusionstack.kcl.KCLColorSettingsPage"/>
         <completion.contributor language="KCL" implementationClass="io.kusionstack.kcl.completion.KCLCompletionContributor"/>
+        <lang.foldingBuilder language="KCL" implementationClass="io.kusionstack.kcl.KCLFoldingBuilder"/>
     </extensions>
 
     <actions>
