@@ -18,6 +18,7 @@
         <lang.braceMatcher language="KCL" implementationClass="io.kusionstack.kcl.KCLBraceMatcher"/>
         <lineIndentProvider implementation="io.kusionstack.kcl.KCLLineIndentProvider"/>
         <enterBetweenBracesDelegate language="KCL" implementationClass="com.intellij.codeInsight.editorActions.enter.EnterBetweenBracesAndBracketsDelegate"/>
+        <lang.psiStructureViewFactory language="KCL" implementationClass="io.kusionstack.kcl.KCLStructureViewFactory"/>
     </extensions>
 
     <actions>
