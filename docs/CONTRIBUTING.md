@@ -61,3 +61,5 @@ the artifact name: intellij-kcl (=rootProject.name in settings.gradle.kts) （�
 - 关于注册和发布到插件市场：https://plugins.jetbrains.com/docs/intellij/plugin-signing.html#provide-secrets-to-ide https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html
 
 - 我们的插件是自定义语言插件，相关参考：https://plugins.jetbrains.com/docs/intellij/custom-language-support.html
+
+- 搜索使用了某个扩展点的插件仓库，寻找示例时很有用：https://plugins.jetbrains.com/intellij-platform-explorer/extensions?extensions=com.intellij.lineIndentProvider

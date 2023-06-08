@@ -16,6 +16,7 @@
         <completion.contributor language="KCL" implementationClass="io.kusionstack.kcl.completion.KCLCompletionContributor"/>
         <lang.foldingBuilder language="KCL" implementationClass="io.kusionstack.kcl.KCLFoldingBuilder"/>
         <lang.braceMatcher language="KCL" implementationClass="io.kusionstack.kcl.KCLBraceMatcher"/>
+        <lineIndentProvider implementation="io.kusionstack.kcl.KCLLineIndentProvider"/>
     </extensions>
 
     <actions>
