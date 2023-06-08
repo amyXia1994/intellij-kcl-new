@@ -4,18 +4,21 @@ import io.kusionstack.kcl.psi.KCLTypes;
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IElementType;
+
 %%
 
-%class _KCLLexer
+%class _KCLHighlightingLexer
 %implements FlexLexer
 %unicode
 %function advance
 
 %type IElementType
 
+
+
 NAME=\$?[a-zA-Z_]\w*
 COMMENT="#"[^\n]*
-NEWLINE=((\r?\n[\t ]*)|{COMMENT})+
+NEWLINE=(\r?\n[\t ]*)*(\r?\n)
 
 // ignore: whitespace, line continue
 WHITE_SPACE=[\ \t]
@@ -125,9 +128,9 @@ TRIPLE_APOS_LITERAL = {THREE_APOS} {APOS_STRING_CHAR}* {THREE_APOS}?
 
 // types
 "str"                 { return KCLTypes.STRING_TYPE; }
+"bool"                { return KCLTypes.BOOL_TYPE; }
 "int"                 { return KCLTypes.INT_TYPE; }
 "float"               { return KCLTypes.FLOAT_TYPE; }
-"bool"                { return KCLTypes.BOOL_TYPE; }
 
 // Constant tokens
 "True"                { return KCLTypes.TRUE; }
@@ -150,8 +153,6 @@ TRIPLE_APOS_LITERAL = {THREE_APOS} {APOS_STRING_CHAR}* {THREE_APOS}?
 "Gi"                  { return KCLTypes.SI_G_IEC; }
 "Ti"                  { return KCLTypes.SI_T_IEC; }
 "Pi"                  { return KCLTypes.SI_P_IEC; }
-//"i"                   { return KCLTypes.IEC; }
-
 
 {LINE_CONTINUE}       {/* ignore */}
 {NAME}               { return KCLTypes.NAME; }

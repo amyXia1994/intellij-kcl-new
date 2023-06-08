@@ -10,6 +10,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="KCL File" implementationClass="io.kusionstack.kcl.KCLFileType" fieldName="INSTANCE" language="KCL" extensions="k"/>
+        <lang.parserDefinition language="KCL" implementationClass="io.kusionstack.kcl.KCLParserDefinition"/>
     </extensions>
 
     <actions>

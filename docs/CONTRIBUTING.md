@@ -28,12 +28,19 @@ the artifact name: intellij-kcl (=rootProject.name in settings.gradle.kts) （�
 - 在 src/main/java/io/kusionstack/kcl/kcl.bnf 文件上右键菜单栏选择 `Generate Parser Code`
 - 生成后，为使得 IDEA 能够将 gen 包标记为一个已生成的源目录，从而正常显示代码提示，需要在 IDEA 内在生成的目录 src/main/gen 上方，右键选择 "Mark Directory as" > "Generated Sources Root"
 
+#### lexer generator
+- 安装相关插件：grammar kit
+- （无需操作）安装 jflex-1.7.0-2.jar 和 idea-flex.skeleton，已经放置在项目根目录下，无需额外安装
+- 在 src/main/java/io/kusionstack/kcl/kcl.flex 文件上右键菜单栏选择 `Run Jflex Generator`
 
 
 ## 耗时步骤：
 - 首次执行 ./gradlew build 会相当耗时，因为需要下载 ideaIC，大几百兆，如果出现超时但下载未完成的情况，重试即可，会断点续传
 
 ## 错误解决：
+
+### 报错：
+- 删除某个测试类后，重新构建时 IntelliJ IDEA 仍然在尝试运行已删除的测试类。需要清理缓存
 
 ### 警告：
 1. The IDE is not configured for using custom VM options (jb.vmOptionsFile=null)
