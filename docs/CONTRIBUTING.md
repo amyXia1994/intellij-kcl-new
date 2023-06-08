@@ -12,6 +12,7 @@ the artifact name: intellij-kcl (=rootProject.name in settings.gradle.kts) （�
 
 - 需要安装 intellij IDEA
 - 需要安装 jdk11
+- 设置 intellij idea：Preference > File Encoding > Properties files(*.properties) > Default encoding for properties files 设置为 UTF-8
 
 ### 构建、运行、测试
 - 构建：./gradlew build 构建完毕后显示 BUILD SUCCESSFUL，并且在 build/distributions 目录下产出名为 intellij-kcl-<version>.zip 的发布包

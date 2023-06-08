@@ -6,7 +6,7 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.ActionsBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="KCL File" implementationClass="io.kusionstack.kcl.KCLFileType" fieldName="INSTANCE" language="KCL" extensions="k"/>
@@ -22,9 +22,21 @@
     </extensions>
 
     <actions>
-        <group id="intellijkclnew.HelloMenu" text="Sample Menu" description="Sample menu">
-            <add-to-group group-id="ToolsMenu" anchor="last"  />
-            <action id="Myplugin.Textboxes" class="io.kusionstack.kcl.actions.HelloAction" text="Text Boxes" description="A test menu item" />
+        <!-- KCL Tools: the pop up action group -->
+
+        <group id="io.kusionstack.kcl.action.KCLToolsPopUpActionGroup" icon="/icons/file.svg">
+            <add-to-group group-id="EditorPopupMenu" anchor="before" relative-to-action="CompareClipboardWithSelection"/>
+            <add-to-group group-id="ToolsMenu" anchor="before" relative-to-action="ExternalToolsGroup"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <action id="io.kusionstack.kcl.action.FormatSingleFileAction" class="io.kusionstack.kcl.action.FormatSingleFileAction" icon="/icons/file.svg">
+            </action>
+            <action id="io.kusionstack.kcl.action.FormatDirectoryAction" class="io.kusionstack.kcl.action.FormatDirectoryAction" icon="/icons/file.svg">
+            </action>
+        </group>
+        <group id="io.kusionstack.kcl.group.KCLHelpGroup" popup="true" icon="/icons/file.svg">
+            <action id="io.kusionstack.kcl.action.OpenKCLHelpAction" class="io.kusionstack.kcl.action.OpenKCLHelpAction"
+                    icon="/icons/kusion.svg"/>
+            <add-to-group group-id="HelpMenu" anchor="last"/>
         </group>
     </actions>
 
