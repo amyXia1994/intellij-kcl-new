@@ -23,6 +23,11 @@ the artifact name: intellij-kcl (=rootProject.name in settings.gradle.kts) （�
 
 ### 生成器使用
 
+#### parser generator
+- 安装相关插件：grammar kit
+- 在 src/main/java/io/kusionstack/kcl/kcl.bnf 文件上右键菜单栏选择 `Generate Parser Code`
+- 生成后，为使得 IDEA 能够将 gen 包标记为一个已生成的源目录，从而正常显示代码提示，需要在 IDEA 内在生成的目录 src/main/gen 上方，右键选择 "Mark Directory as" > "Generated Sources Root"
+
 
 
 ## 耗时步骤：
