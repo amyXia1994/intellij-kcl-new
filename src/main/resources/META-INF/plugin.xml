@@ -17,6 +17,7 @@
         <lang.foldingBuilder language="KCL" implementationClass="io.kusionstack.kcl.KCLFoldingBuilder"/>
         <lang.braceMatcher language="KCL" implementationClass="io.kusionstack.kcl.KCLBraceMatcher"/>
         <lineIndentProvider implementation="io.kusionstack.kcl.KCLLineIndentProvider"/>
+        <enterBetweenBracesDelegate language="KCL" implementationClass="com.intellij.codeInsight.editorActions.enter.EnterBetweenBracesAndBracketsDelegate"/>
     </extensions>
 
     <actions>
