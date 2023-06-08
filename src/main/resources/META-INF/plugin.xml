@@ -13,6 +13,7 @@
         <lang.parserDefinition language="KCL" implementationClass="io.kusionstack.kcl.KCLParserDefinition"/>
         <lang.syntaxHighlighterFactory language="KCL" implementationClass="io.kusionstack.kcl.KCLSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="io.kusionstack.kcl.KCLColorSettingsPage"/>
+        <completion.contributor language="KCL" implementationClass="io.kusionstack.kcl.completion.KCLCompletionContributor"/>
     </extensions>
 
     <actions>
