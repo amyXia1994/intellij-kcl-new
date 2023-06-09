@@ -1,7 +1,9 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# intellij-kcl-new Changelog
+# intellij-kcl Changelog
 
-## [Unreleased]
+## [0.1.15]
+
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+
+- basic language features: highlight; brace matching; auto-folding; code-completion; code-formatting.

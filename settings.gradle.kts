@@ -1,1 +1,1 @@
-rootProject.name = "intellij-kcl-new"
+rootProject.name = "intellij-kcl"

@@ -1,6 +1,6 @@
-# intellij-kcl-new
+# intellij-kcl
 
-![Build](https://github.com/amyXia1994/intellij-kcl-new/workflows/Build/badge.svg)
+![Build](https://github.com/KusionStack/intellij-kcl/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
@@ -17,23 +17,32 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+The KCL IntelliJ IDEA plugin provides rich language support(highlighting, formatting, etc.) for the [KCL language](https://kcl-lang.io/).
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+### Quick Start
+-   **Step 1.** Install kcl on your system. We highly recommend to [install the Kusion tools package](https://kusionstack.io/docs/user_docs/getting-started/install) which contains the KCL language support and other tools.
+-   **Step 2.** Install the KCL plugin for IntelliJ IDEA. Download the distribution from [here](distributions) and in IntelliJ IDEA, click Preference -> plugins -> install Plugin from Disk... -> select kcl-idea-plugin zip -> restart IDE. This plugin requires the IntelliJ IDEA 2020.2+
+-   **Step 3.** Open or create a KCL file and begin your KCL tour!
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+### Features
+
+This extension provides coding assistance such as basic syntax highlight, IntelliSense such as auto complete, and some basic code navigation. Other useful features such as diagnostics and testing are in developing.
+
+Following features requires the kcl tool installed:
+- Code Formatting: Right click on the editor and select KCL Tools -> Format File to format current KCL file; Right click on the target directory in the project structure panel, select KCL Tools -> Format Directory to format all files under the selected folder.
+
 <!-- Plugin description end -->
 
 ## Installation
 
 - Using IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-kcl-new"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-kcl"</kbd> >
   <kbd>Install Plugin</kbd>
   
 - Manually:
 
-  Download the [latest release](https://github.com/amyXia1994/intellij-kcl-new/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/KusionStack/intellij-kcl/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 

@@ -6,3 +6,6 @@ run:
 
 test:
 	./gradlew test
+
+verify:
+	./gradlew verifyPluginConfiguration

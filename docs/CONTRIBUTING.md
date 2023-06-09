@@ -21,6 +21,13 @@ the artifact name: intellij-kcl (=rootProject.name in settings.gradle.kts) （�
   - 应该是 Junit 规范的 xml 格式的测试报告：build/test-results/test/TEST-xx.xml
   - html 格式的一些记录，看起来不像是测试覆盖率：build/reports/configuration-cache/xx/xx/configuration-cache-report.html
 - 另一个 runIdeForUiTests：行为上看起来和 runIDE 相似，都是本地启动一个安装了插件的ide
+- 升级：gradle.properties 文件中的 （pluginSinceBuild，pluginUntilBuild），platformVersion 字段声明了插件的兼容版本和构建版本，目前我们没有设置 pluginUntilBuild 字段，因此如果不存在兼容性问题的情况下，构建出的插件将允许在未来任意新版本的 intellij IDEA 上安装。在 intellij IDEA 发布新版本时，我们需要将 pluginUntilBuild 设置为新版本的版本号（例如2023.1则对应版本号为231），并通过 gradle 运行 verifyPluginConfiguration 任务（./gradlew verifyPluginConfiguration），查看兼容性校验结果。结果类似于：
+    > Task :verifyPluginConfiguration
+    [gradle-intellij-plugin :verifyPluginConfiguration] The following plugin configuration issues were found:
+    The 'since-build' property is lower than the target IntelliJ Platform major version: 191 < 221.
+    The Java configuration specifies targetCompatibility=11 but since-build='191' property requires targetCompatibility=1.8.
+    The Kotlin configuration specifies jvmTarget=11 but since-build='191' property requires jvmTarget=1.8.
+    See: https://jb.gg/intellij-platform-versions
 
 ### 生成器使用
 
